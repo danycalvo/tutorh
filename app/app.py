@@ -129,7 +129,7 @@ class Subtract(Resource):
 
 
 api.add_resource(Add, '/add')
-api.add_resource(Mongo, '/mongo')
+#api.add_resource(Mongo, '/mongo')
 api.add_resource(Subtract, '/subtract')
 
 

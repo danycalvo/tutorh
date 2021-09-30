@@ -8,13 +8,13 @@ app = Flask(__name__)
 app.config['DEBUG'] = False
 api = Api(app)
 data = os.environ.get('MI_DATA', 'Result:')
-url_db = os.environ.get('URL_DB')
-usuario = os.environ.get('user')
-passwd = os.environ.get('pass')
+#url_db = os.environ.get('URL_DB')
+#usuario = os.environ.get('user')
+#passwd = os.environ.get('pass')
 
-myclient = pymongo.MongoClient(url_db,username=usuario,password=passwd)
-mydb = myclient["db_dc"]
-mycol = mydb["clientes"]
+#myclient = pymongo.MongoClient(url_db,username=usuario,password=passwd)
+#mydb = myclient["db_dc"]
+#mycol = mydb["clientes"]
 
 
 def checkdata(postedData):
@@ -45,7 +45,7 @@ def checkdata(postedData):
 
     return estate
 
-
+"""
 class Mongo(Resource):
     def post(self):
         postedData = request.get_json()
@@ -59,7 +59,7 @@ class Mongo(Resource):
             'Status code': 200
         }
         return jsonify(retMap)
-
+"""
 
 class Add(Resource):
     def post(self):

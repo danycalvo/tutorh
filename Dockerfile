@@ -1,4 +1,5 @@
-FROM registry.access.redhat.com/ubi8/python-38
+#FROM registry.access.redhat.com/ubi8/python-38
+FROM python:3.7-slim
 ADD requirements .
 RUN python -m pip install -r requirements
 
